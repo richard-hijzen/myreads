@@ -12,21 +12,23 @@ class Book extends Component {
               <li key={book.id}>
                 <div className="book">
                   <div className="book-top">
+                  {book.imageLinks && (
                     <div
                       className="book-cover"
                       style={{
                         width: 128,
                         height: 193,  
-                        backgroundImage: `url(${book.imageLinks.smallThumbnail})`
+                        backgroundImage: `url(${book.imageLinks.thumbnail})`
                       }}
                     />
+                  )}
                     <div className="book-shelf-changer">
                       <select
                         name="shelf"
                         onChange={e => this.props.changeShelf(e, book)}
                         value={book.shelf}
                       >
-                        <option value="none" disabled>
+                        <option value="move" disabled>
                           Move to...
                         </option>
                         <option value="currentlyReading">
