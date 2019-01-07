@@ -2,6 +2,7 @@
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
     "merge": "^1.2.1",
+    "npm": "^6.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
